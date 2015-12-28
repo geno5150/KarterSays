@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KarterSays" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="E4l-3L-rg3">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sex-3B-ryi">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="YeQ-qe-GMs"/>
+                                            <constraint firstAttribute="height" constant="58" id="aQZ-Lh-MpL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                        <state key="normal" title="KARTER SAYS!"/>
+                                        <connections>
+                                            <action selector="getInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BoO-VF-kgt"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="EcS-jL-BPc">
+                                        <rect key="frame" x="0.0" y="58" width="600" height="522"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIK-Fg-KWW">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
+                                                <state key="normal" title="Happy Karter"/>
+                                                <connections>
+                                                    <segue destination="fhu-Ga-MYz" kind="show" identifier="HappyKarter" id="QhX-FX-0Fm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mm-JS-Rhv">
+                                                <rect key="frame" x="0.0" y="246" width="600" height="30"/>
+                                                <state key="normal" title="Grumpy Karter"/>
+                                                <connections>
+                                                    <segue destination="fhu-Ga-MYz" kind="show" identifier="GrumpyKarter" id="iax-bH-h4z"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8q3-bL-6eb">
+                                                <rect key="frame" x="0.0" y="492" width="600" height="30"/>
+                                                <state key="normal" title="Robot Karter"/>
+                                                <connections>
+                                                    <segue destination="fhu-Ga-MYz" kind="show" identifier="RobotKarter" id="Rcb-SW-eQd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="rIK-Fg-KWW" firstAttribute="top" secondItem="EcS-jL-BPc" secondAttribute="top" constant="20" id="TAY-H2-fdk"/>
+                                            <constraint firstAttribute="bottom" secondItem="8q3-bL-6eb" secondAttribute="bottom" constant="20" id="X1l-F5-VnB"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EcS-jL-BPc" firstAttribute="top" secondItem="Sex-3B-ryi" secondAttribute="bottom" id="bHI-v3-YMh"/>
+                                    <constraint firstAttribute="bottom" secondItem="EcS-jL-BPc" secondAttribute="bottom" id="esx-OE-W2G"/>
+                                    <constraint firstAttribute="trailing" secondItem="EcS-jL-BPc" secondAttribute="trailing" id="iCe-mc-Zv9"/>
+                                    <constraint firstItem="EcS-jL-BPc" firstAttribute="leading" secondItem="E4l-3L-rg3" secondAttribute="leading" id="jro-FZ-eJO"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="E4l-3L-rg3" secondAttribute="bottom" id="8ad-mR-1aD"/>
+                            <constraint firstItem="E4l-3L-rg3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="DD7-0s-el9"/>
+                            <constraint firstItem="E4l-3L-rg3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rjk-Ca-6dg"/>
+                            <constraint firstAttribute="trailing" secondItem="E4l-3L-rg3" secondAttribute="trailing" id="yVc-qA-pLx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="358"/>
+        </scene>
+        <!--Recorder View Controller-->
+        <scene sceneID="0d9-DK-fiI">
+            <objects>
+                <viewController id="fhu-Ga-MYz" customClass="RecorderViewController" customModule="KarterSays" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9k2-Gk-JsI"/>
+                        <viewControllerLayoutGuide type="bottom" id="HJA-d5-Lwv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="COF-UF-OQm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="4rg-MP-Qc2">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy Karter Listening" translatesAutoresizingMaskIntoConstraints="NO" id="OUB-32-cEl">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="542"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZy-1j-bnH">
+                                        <rect key="frame" x="0.0" y="542" width="600" height="38"/>
+                                        <state key="normal" title="Button" image="Start"/>
+                                        <connections>
+                                            <action selector="startKarter:" destination="fhu-Ga-MYz" eventType="touchUpInside" id="j9O-py-QWx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="OUB-32-cEl" firstAttribute="trailing" secondItem="4rg-MP-Qc2" secondAttribute="trailingMargin" id="65L-ha-S0f"/>
+                                    <constraint firstItem="OUB-32-cEl" firstAttribute="leading" secondItem="4rg-MP-Qc2" secondAttribute="leadingMargin" id="Kwe-9T-Km8"/>
+                                    <constraint firstItem="dZy-1j-bnH" firstAttribute="centerX" secondItem="4rg-MP-Qc2" secondAttribute="centerX" id="r3m-JL-PIn"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4rg-MP-Qc2" secondAttribute="bottom" id="6d2-qm-hDJ"/>
+                            <constraint firstItem="4rg-MP-Qc2" firstAttribute="top" secondItem="COF-UF-OQm" secondAttribute="top" constant="20" id="Mib-Kv-BFd"/>
+                            <constraint firstItem="4rg-MP-Qc2" firstAttribute="leading" secondItem="COF-UF-OQm" secondAttribute="leading" id="YXR-um-cd0"/>
+                            <constraint firstAttribute="trailing" secondItem="4rg-MP-Qc2" secondAttribute="trailing" id="stS-R6-VMA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animImage" destination="OUB-32-cEl" id="lxP-4d-yOO"/>
+                        <outlet property="startButton" destination="dZy-1j-bnH" id="3IM-Tn-bTU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mWQ-yX-ZgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="358"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Start" width="300" height="67"/>
+        <image name="happy Karter Listening" width="716" height="960"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="iax-bH-h4z"/>
+    </inferredMetricsTieBreakers>
+</document>
